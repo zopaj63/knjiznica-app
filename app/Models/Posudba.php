@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Posudba extends Model
 {
     use HasFactory;
+    protected $fillable=[""];
+
 }

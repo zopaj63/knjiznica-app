@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Clan extends Model
 {
     use HasFactory;
+    protected $fillable=["ime", "prezime"];
 }

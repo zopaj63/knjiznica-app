@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ClanController;
+use App\Http\Controllers\KnjigaController;
+use App\Http\Controllers\PosudbaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +19,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource(“clans”, ClanController::class); //stvara rute za sve CRUD operacije
+Route::resource(“knjigas”, KnjigaController::class);
+Route::resource(“posudbas”, PosudbaController::class);

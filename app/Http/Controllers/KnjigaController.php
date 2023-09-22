@@ -18,4 +18,16 @@ class KnjigaController extends Controller
         return view(“knjiga.create”);
     }
 
+    public function store(Request $request)
+    {
+        $request->validate([
+            “naslov”=>”required”,
+            “autor”=>”required”,
+            “god_izd”=>”required|numeric”
+        ]);
+
+        Knjiga::create($request->all());
+        return redirect()->route("knjigas.index")->with("success", "Knjiga je unesena");
+    }
+
 }

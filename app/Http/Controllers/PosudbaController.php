@@ -18,6 +18,11 @@ class PosudbaController extends Controller
         return view(“posudba.create”);
     }
 
+    public function store(Request $request)
+    {
+
+    }
+
 
     //u petak crUD
 }

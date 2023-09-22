@@ -18,4 +18,16 @@ class ClanController extends Controller
         return view(“clan.create”);
     }
 
+    public function store(Request $request) // spremanje zapisa u bazu
+    {
+        $request->validate([
+            “ime”=>”required”,  //ime iz forme iz create.blade.php
+            “prezime”=>”required”
+        ]);
+
+        Clan::create($request->all());
+
+        return redirect()->route("clans.index")->with("success", "Član je upisan");
+    }
+
 }

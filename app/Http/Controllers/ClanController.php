@@ -57,7 +57,7 @@ class ClanController extends Controller
     public function destroy(Clan $clan)
     {
         $clan->delete();
-        return redirect()->route("cland.index");
+        return redirect()->route("clans.index");
     }
 
 }

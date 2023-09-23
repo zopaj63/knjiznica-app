@@ -10,20 +10,20 @@ class KnjigaController extends Controller
     public function index()
     {
         $knjigas=Knjiga::all();
-        return view(“knjiga.index”, compact(“knjigas”));
+        return view("knjiga.index", compact("knjigas"));
     }
 
     public function create()
     {
-        return view(“knjiga.create”);
+        return view("knjiga.create");
     }
 
     public function store(Request $request)
     {
         $request->validate([
-            “naslov”=>”required”,
-            “autor”=>”required”,
-            “god_izd”=>”required|numeric”
+            "naslov"=>"required",
+            "autor"=>"required",
+            "god_izd"=>"required|numeric"
         ]);
 
         Knjiga::create($request->all());

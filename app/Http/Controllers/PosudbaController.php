@@ -10,12 +10,12 @@ class PosudbaController extends Controller
     public function index()
     {
         $posudbas=Posudba::all();
-        return view(“posudba.index”, compact(“posudbas”));
+        return view("posudba.index", compact("posudbas"));
     }
 
     public function create()
     {
-        return view(“posudba.create”);
+        return view("posudba.create");
     }
 
     public function store(Request $request)

@@ -20,6 +20,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource(“clans”, ClanController::class); //stvara rute za sve CRUD operacije
-Route::resource(“knjigas”, KnjigaController::class);
-Route::resource(“posudbas”, PosudbaController::class);
+Route::resource("clans", ClanController::class); //stvara rute za sve CRUD operacije
+Route::resource("knjigas", KnjigaController::class);
+Route::resource("posudbas", PosudbaController::class);
+
+// kako bi izgledalo ručno pisanje rute (umjesto resource) za npt. edit:
+// Route::get("/clans/{clan}/edit", "ClanController@edit")->name(clans.edit);
+
+Route::get("/knjigas/{knjiga}/confirmDelete", [KnjigaController::Class, "confirmDelete"])->name("knjigas.confirm-delete");
+
+Route::get("/clans/{clan}/confirmDelete", [ClanController::Class, "confirmDelete"])->name("clans.confirm-delete");

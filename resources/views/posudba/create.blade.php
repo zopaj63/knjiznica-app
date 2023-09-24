@@ -6,7 +6,7 @@
         <label>Odabir člana</label>
         <select>
             @foreach
-            <option value=" ">clan-id</option>
+            <option value="{{}}">{{}}</option>
 
             @endforeach
 

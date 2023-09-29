@@ -5,10 +5,10 @@
 
         <label>Odabir člana</label>
         <select>
-            @foreach
-            <option value="{{}}">{{}}</option>
+            
+            <option value=" ">clan-id</option>
 
-            @endforeach
+            
 
 
 
@@ -16,10 +16,10 @@
 
         <label>Odabir knjige</label>
         <select>
-            @foreach
+            
             <option value=" ">knjiga-id</option>
 
-            @endforeach
+            
 
 
 

@@ -18,4 +18,8 @@
     </li>
     @endforeach
 </ol>
-<a href="{{route('clans.create')}}">Dodaj novog člana</a>
+<br>
+
+<form action="{{route('clans.create')}}" method="GET">
+    <button type="submit">Dodaj novog člana</button>
+</form>

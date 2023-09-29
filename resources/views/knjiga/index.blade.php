@@ -30,6 +30,12 @@
         </tr>
     @endforeach
     <tr>
-        <td colspan="5"><a href="{{route('knjigas.create')}}"><b>Dodaj novu knjigu</b></a></td>
+        <td colspan="5">
+            <br>
+            <form action="{{route('knjigas.create')}}" method="GET">
+                <button type="submit">Dodaj novu knjigu</button>
+            </form>
+        </td>
     </tr>
 </table>
+

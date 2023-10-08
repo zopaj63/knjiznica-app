@@ -1,0 +1,87 @@
+        /* Stiliziranje tijela i navigacijske trake */
+        body {
+            background-color: #333;
+            color: #aaa;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        nav {
+            background-color: #222;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #eee;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        /* Stiliziranje naslova */
+        h1 {
+            text-align: left;
+            padding: 20px;
+            background-color: #444;
+            color: #888;
+            margin: 0;
+        }
+
+        /* Stiliziranje tablica */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #444;
+            color: #eee;
+        }
+
+        /* Stiliziranje gumba */
+        button {
+            background-color: #555;
+            color: #ddd;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            margin: 0 20px;
+        }
+
+        /* Hover efekt na gumbima */
+        button:hover {
+            background-color: #888;
+        }
+
+        /* Stiliziranje liste */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 4px;
+            background-color: #444;
+            color: #888;
+            margin-top: 30px;
+            font-size: small;
+        }

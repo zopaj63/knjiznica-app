@@ -1,3 +1,7 @@
+@extends('layouts.layout')
+
+@section('content')
+
 <h1>Lista članova</h1>
 
 <ol>
@@ -14,7 +18,6 @@
         </form>
         {{$clan->ime}} 
         {{$clan->prezime}}
-        <hr>
     </li>
     @endforeach
 </ol>
@@ -23,3 +26,5 @@
 <form action="{{route('clans.create')}}" method="GET">
     <button type="submit">Dodaj novog člana</button>
 </form>
+
+@endsection

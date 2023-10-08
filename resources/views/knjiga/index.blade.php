@@ -1,8 +1,10 @@
+@extends('layouts.layout')
+
+@section('content')
+
 <h1>Popis knjiga</h1>
 
-<hr>
-
-<table border="1">
+<table>
     <tr>
         <th>Naslov</th>
         <th>Autor</th>
@@ -38,4 +40,6 @@
         </td>
     </tr>
 </table>
+
+@endsection
 

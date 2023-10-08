@@ -1,3 +1,7 @@
+@extends('layouts.layout')
+
+@section('content')
+
 <h1>Unos posudbe</h1>
 
     <form action="{route('posudbas.store')}}" method="POST">
@@ -33,3 +37,5 @@
         <button type="submit">Dodaj novu posudbu</button>
 
     </form>
+
+@endsection

@@ -1,3 +1,8 @@
+@extends('layouts.layout')
+
+@section('content')
+
+
 <h1>Potvrda brisanja Člana</h1>
 <p>Član: {{$clan->ime}} {{$clan->prezime}}</p>
 <form action="{{route('clans.destroy', $clan->id)}}" method="POST">
@@ -10,5 +15,5 @@
     <button type="submit">Odustani</button>
 </form>
 
-
+@endsection
 

@@ -1,3 +1,7 @@
+@extends('layouts.layout')
+
+@section('content')
+
 <h1>Posudba knjige</h1>
     <ol>
         @foreach ($posudbas as $posudba)
@@ -11,3 +15,5 @@
 
 <br>
 <a href="{{route('posudbas.create')}}">Dodaj novu posudbu</a>
+
+@endsection

@@ -1,3 +1,7 @@
+@extends('layouts.layout')
+
+@section('content')
+
 <h1>Uređivanje knjige</h1>
 
 <form action="{{route('knjigas.update', $knjiga->id)}}" method="POST">
@@ -12,3 +16,5 @@
     <input type="text" name="god_izd" value="{{$knjiga->god_izd}}"><br>
     <button type="submit">Ažuriraj knjigu</button>
 </form>
+
+@endsection

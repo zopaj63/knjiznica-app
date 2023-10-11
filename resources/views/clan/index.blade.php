@@ -16,7 +16,7 @@
             @method("DELETE")
             <button type="submit">Obriši</button>
         </form>
-        {{$clan->ime}} 
+        {{$clan->ime}}
         {{$clan->prezime}}
     </li>
     @endforeach

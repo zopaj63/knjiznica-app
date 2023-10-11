@@ -16,9 +16,9 @@ use App\Http\Controllers\PosudbaController;
 |
 */
 
-Route::get('/', function () {
+Route::get('/home', function () {
     return view('welcome');
-});
+})->name('home');
 
 Route::resource("clans", ClanController::class); //stvara rute za sve CRUD operacije
 Route::resource("knjigas", KnjigaController::class);

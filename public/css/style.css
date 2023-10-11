@@ -8,7 +8,7 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
         }
 
@@ -18,8 +18,9 @@
             text-align: center;
         }
 
-        nav a {
-            color: #eee;
+        nav a,
+        a {
+            color: #aaa;
             text-decoration: none;
             margin: 0 10px;
         }
@@ -40,7 +41,6 @@
             margin-top: 20px;
         }
 
-        th,
         td {
             padding: 8px;
             text-align: left;
@@ -48,8 +48,12 @@
         }
 
         th {
+            padding: 8px;
+            text-align: center;
             background-color: #444;
-            color: #eee;
+            color: #ddd;
+            border-bottom: 1px solid #ddd;
+
         }
 
         /* Stiliziranje gumba */

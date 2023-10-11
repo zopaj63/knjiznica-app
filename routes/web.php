@@ -27,6 +27,8 @@ Route::resource("posudbas", PosudbaController::class);
 // kako bi izgledalo ručno pisanje rute (umjesto resource) za npt. edit:
 // Route::get("/clans/{clan}/edit", "ClanController@edit")->name(clans.edit);
 
-Route::get("/knjigas/{knjiga}/confirmDelete", [KnjigaController::Class, "confirmDelete"])->name("knjigas.confirm-delete");
+Route::get("/clans/{clan}/confirmDelete", [ClanController::class, "confirmDelete"])->name("clans.confirm-delete");
 
-Route::get("/clans/{clan}/confirmDelete", [ClanController::Class, "confirmDelete"])->name("clans.confirm-delete");
+Route::get("/knjigas/{knjiga}/confirmDelete", [KnjigaController::class, "confirmDelete"])->name("knjigas.confirm-delete");
+
+Route::get("/posudbas/{posudba}/confirmDelete", [PosudbaController::class, "confirmDelete"])->name("posudbas.confirm-delete");

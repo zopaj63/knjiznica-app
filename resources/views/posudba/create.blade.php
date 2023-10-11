@@ -4,38 +4,29 @@
 
 <h1>Unos posudbe</h1>
 
-    <form action="{route('posudbas.store')}}" method="POST">
-        @csrf
+<form action="{{route('posudbas.store')}}" method="POST">
+    @csrf
 
-        <label>Odabir člana</label>
-        <select>
-            
-            <option value=" ">clan-id</option>
+    <label>Odabir člana</label>
+    <select name="clan_id" required>
+        @foreach($clanovi as $clan)
+        <option value="{{$clan->id}}">{{$clan->ime}} {{$clan->prezime}}</option>
+        @endforeach
+    </select>
 
-            
+    <label>Odabir knjige</label>
+    <select name="knjiga_id">
+        @foreach($knjige as $knjiga)
+        <option value="{{$knjiga->id}}">{{$knjiga->naslov}}</option>
+        @endforeach
+    </select>
 
+    <br><br>
+    <label>Datum posudbe</label>
+    <input type="date" name="datum_posudbe"><br><br>
 
+    <button type="submit">Dodaj novu posudbu</button>
 
-        </select>
-
-        <label>Odabir knjige</label>
-        <select>
-            
-            <option value=" ">knjiga-id</option>
-
-            
-
-
-
-        </select>
-        <br><br>
-        <label>Datum posudbe</label>
-        <input type="text" name="datum_posudbe"><br><br>
-        <label>Datum povrata</label>
-        <input type="text" name="datum_povrata"><br><br>
-
-        <button type="submit">Dodaj novu posudbu</button>
-
-    </form>
+</form>
 
 @endsection

@@ -21,8 +21,6 @@
 </form>
 
 <br><br>
-<a href="{{route('posudbas.index')}}">Sve posudbe</a>
-
 <form action="{{route('posudbas.index')}}" method="GET">
     @csrf
     <button type="submit">Sve posudbe</button>

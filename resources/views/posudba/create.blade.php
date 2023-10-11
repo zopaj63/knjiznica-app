@@ -26,7 +26,12 @@
     <input type="date" name="datum_posudbe"><br><br>
 
     <button type="submit">Dodaj novu posudbu</button>
+</form>
 
+<br><br>
+<form action="{{route('posudbas.index')}}" method="GET">
+    @csrf
+    <button type="submit">Odustani</button>
 </form>
 
 @endsection

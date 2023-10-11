@@ -15,4 +15,9 @@
     <button type="submit">Dodaj novu knjigu</button>
 </form>
 
+<br>
+<form action="{{route('knjigas.index')}}" method="GET">
+    <button type="submit">Odustani</button>
+</form>
+
 @endsection

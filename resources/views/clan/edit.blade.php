@@ -15,4 +15,9 @@
     <button type="submit">Ažuriraj člana</button>
 </form>
 
+<br>
+<form action="{{route('clans.index')}}" method="GET">
+    <button type="submit">Odustani</button>
+</form>
+
 @endsection

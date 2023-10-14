@@ -55,7 +55,7 @@ class PosudbaController extends Controller
             "clan_id" => "required",
             "knjiga_id" => "required",
             "datum_posudbe" => "required|date",
-            "datum_povrata" => "required|date",
+            "datum_povrata" => "nullable|date",
         ]);
 
         $posudba->update($request->all()); //pohrana u bazu validirane ažurirane podatke

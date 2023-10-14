@@ -30,7 +30,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; {{ date('Y') }} Knjižnica-App. Izvorni kod:<a href=https://github.com/zopaj63/knjiznica-app>GitHub</a></p>
+        <p>&copy; {{ date('Y') }} Knjižnica-App. Izvorni kod:<a href=https://github.com/zopaj63/knjiznica-app target="_blank">GitHub</a></p>
     </footer>
 
 </body>

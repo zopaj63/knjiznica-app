@@ -7,6 +7,10 @@
 <ol>
     @foreach ($clans as $clan)
     <li>
+        <form action="{{route('clans.show', $clan->id)}}" method="GET" style="display: inline;">
+            @csrf
+            <button type="submit">Prikaži</button>
+        </form>
         <form action="{{route('clans.edit', $clan->id)}}" method="GET" style="display: inline;">
             @csrf
             <button type="submit">Uredi</button>

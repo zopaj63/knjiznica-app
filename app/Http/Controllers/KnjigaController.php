@@ -10,7 +10,7 @@ class KnjigaController extends Controller
     // metoda za čitanje podataka iz baze
     public function index()
     {
-        $knjigas=Knjiga::all();
+        $knjigas = Knjiga::all();
         return view("knjiga.index", compact("knjigas"));
     }
 
@@ -24,15 +24,20 @@ class KnjigaController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            "naslov"=>"required",
-            "autor"=>"required",
-            "god_izd"=>"required|numeric"
+            "naslov" => "required",
+            "autor" => "required",
+            "god_izd" => "required|numeric"
         ]);
 
         Knjiga::create($request->all());
         return redirect()->route("knjigas.index")->with("success", "Knjiga je unesena");
     }
-    
+
+    public function show(Knjiga $knjiga)
+    {
+        return view("knjiga.show", compact("knjiga"));
+    }
+
     public function edit(Knjiga $knjiga)
     {
         return view("knjiga.edit", compact("knjiga"));
@@ -54,6 +59,4 @@ class KnjigaController extends Controller
         $knjiga->delete();
         return redirect()->route("knjigas.index");
     }
-
-
 }

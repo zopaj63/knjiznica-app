@@ -10,7 +10,7 @@ class ClanController extends Controller
     // metoda za čitanje podataka iz baze
     public function index() //index je standarni naziv za metodu koja čita iz baze
     {
-        $clans=Clan::all();
+        $clans = Clan::all();
         return view("clan.index", compact("clans")); // compact pretvara rezultat upita u asocijativni niz
     }
 
@@ -24,13 +24,19 @@ class ClanController extends Controller
     public function store(Request $request) // spremanje zapisa u bazu
     {
         $request->validate([
-            "ime"=>"required",  //ime iz forme iz create.blade.php
-            "prezime"=>"required"
+            "ime" => "required",  //ime iz forme iz create.blade.php
+            "prezime" => "required"
         ]);
 
         Clan::create($request->all());
 
         return redirect()->route("clans.index")->with("success", "Član je upisan");
+    }
+
+    // prikaz pojedinačnog zapisa iz baze (po id)
+    public function show(Clan $clan)
+    {
+        return view("clan.show", compact("clan"));
     }
 
     // metoda za prikaz popunjene forme za promjenu (edit) pojedinog zapisa
@@ -59,5 +65,4 @@ class ClanController extends Controller
         $clan->delete();
         return redirect()->route("clans.index");
     }
-
 }
